@@ -1,0 +1,52 @@
+    
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  li,
+  p,
+  a,
+  span {
+    font-family: var(--textFont);
+    font-weight: var(--fontRegular);
+  }
+  
+  p,
+  span {
+    letter-spacing: 0.6px;
+  }
+  
+  button {
+    outline: none;
+    border: none;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  h1,
+  h2,
+  h4 {
+    margin: 0;
+    color: var(--mainColor);
+    font-weight: var(--fontRegular);
+    font-family: var(--titleFont);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  body {
+    background-color: var(--secondaryBackgroundColor);
+    /* background-color: var(--backgroundColor); */
+  }
+  
