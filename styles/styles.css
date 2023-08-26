@@ -38,7 +38,7 @@
   text-align: start;
   color: var(--mainColor);
   font-weight: var(--fontRegular);
-  font-size: clamp(30px, 8vw ,var(--titleFontSize));
+  font-size: clamp(30px, 8vw, var(--titleFontSize));
   font-family: var(--titleFont);
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -53,11 +53,8 @@
   top: 0;
   z-index: -1;
 }
-
-.section_group {
-  background-image: url("/assets/images/back-group.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+.mobile{
+    display: none;
 }
 
 .button {
@@ -77,11 +74,31 @@
   justify-content: center;
   cursor: pointer;
   letter-spacing: -0.5px;
+  box-shadow: 0 6px 5px 0 #E6D1BF;
   transition-duration: 0.5s;
 }
 
 .button:hover {
   background-color: var(--secondaryColor);
+}
+
+/* =============background images ====================== */
+
+.section-group {
+  position: relative;
+}
+
+.image_background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  height: 115%;
+}
+
+.footer_back {
+  height: 130%;
+  top: auto;
 }
 
 /* ============================HEADEER================================== */
@@ -152,16 +169,16 @@
 .section_upmain {
   padding-block: 11rem 2rem;
   grid-template-columns: 1fr 1fr;
+  /* position: relative; */
 }
 
 .upmain_left {
   position: relative;
   max-width: 480px;
   max-height: 650px;
-  min-width: 358px;
-  min-height: 532px;
   z-index: 1;
 }
+
 
 .upmain_frame::after {
   content: "";
@@ -176,7 +193,6 @@
   left: 24px;
   z-index: -1;
 }
-
 
 .upmain_right {
   display: flex;
@@ -235,28 +251,30 @@
   height: fit-content;
 }
 
-.section_center{
-    position: relative;
-    max-width: 360px;
-    max-height: 560px;
-    z-index: 1;
+.section_center {
+  position: relative;
+  max-width: 360px;
+  max-height: 560px;
+  z-index: 1;
 }
 
-.main_frame::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1.5px solid var(--secondaryColor);
-    /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); */
-    border-top-left-radius: 250px;
-    bottom: -24px;
-    left: 24px;
-    z-index: -1;
+.main_frame::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--secondaryColor);
+  /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); */
+  border-top-left-radius: 250px;
+  bottom: -24px;
+  left: 24px;
+  z-index: -1;
 }
-
 
 /* =================  SECTION ABOUT ============================= */
+.section_about {
+  position: relative;
+}
 .section_about,
 .section_education {
   padding-block: 6rem 2rem;
@@ -272,54 +290,57 @@
   gap: 2rem;
 }
 
-.section_about_right{
-    position: relative;
-    max-width: 432px;
-    max-height: 646px;
-    min-width: 342px;
-    min-height: 532px;
-    z-index: 1;
+.section_about_right {
+  position: relative;
+  max-width: 432px;
+  max-height: 646px;
+  z-index: 1;
 }
 
-.about_frame::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--secondaryColor);
-    border-top-left-radius: 250px;
-    bottom: -24px;
-    right: 24px;
-    z-index: -1;
+.about_frame::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondaryColor);
+  border-top-left-radius: 250px;
+  bottom: -24px;
+  right: 24px;
+  z-index: -1;
 }
 
 /*========================== SECTION EDUCATION =============== */
 
 .section_education_content {
-  grid-template-columns: 0.88fr 1fr;
+  grid-template-columns: 1.8fr 2fr;
   align-items: start;
-  gap: 6rem;
+  gap: 3rem;
   padding-top: 4rem;
 }
 .section_education_right {
   max-height: 1000px;
 }
 .section_education_right ol {
-  gap: 1.5rem;
+  gap: 1rem;
   letter-spacing: -0.5px;
   font-size: 1.125rem;
   transition-duration: 1s;
 }
 
+.section_education_right ol li{
+    margin: 0 0 0 30px;
+}
+
 .read-next {
   cursor: pointer;
-  margin-top: 1rem;
   color: var(--textColor);
   text-decoration: underline;
+  margin-left: 30px;
 }
 /* ============== section  consultation ===========================*/
 .section_consultation {
-  padding-block: 12rem 2rem;
+  margin-block: 12rem 2rem;
+  position: relative;
 }
 
 .section_consultation_content {
@@ -334,6 +355,7 @@
 .section_consultation_right .section__list li {
   grid-template-columns: 1fr 4fr;
   letter-spacing: 1px;
+  align-items: center;
 }
 
 .consultation_right_button-block {
@@ -352,28 +374,24 @@
   margin-top: 0;
 }
 
-.section_consultation_left{
-    position: relative;
-    max-width: 385px;
-    max-height: 500px;
-    min-width: 343px;
-    min-height: 490px;
-    z-index: 1;
+.section_consultation_left {
+  position: relative;
+  max-width: 385px;
+  max-height: 500px;
+  z-index: 1;
 }
 
-.consultation_frame::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1.5px solid var(--secondaryColor);
-    border-top-right-radius: 250px;
-    top: -24px;
-    left: 24px;
-    z-index: -1;
+.consultation_frame::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--secondaryColor);
+  border-top-right-radius: 250px;
+  top: -24px;
+  left: 24px;
+  z-index: -1;
 }
-
-
 
 /* ================= SECTION  FAQ ============================ */
 .section_faq {
@@ -386,23 +404,34 @@
   gap: 7.5rem;
 }
 
-.section_faq_right{
-    position: relative;
-    max-width: 432px;
-    max-height: 600px;
-    z-index: 1;
+.section_faq_right {
+  position: relative;
+  max-width: 432px;
+  max-height: 600px;
+  z-index: 1;
 }
 
-.faq_frame::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 1.5px solid var(--secondaryColor);
-    border-top-left-radius: 250px;
-    bottom: -24px;
-    right: 24px;
-    z-index: -1;
+.faq_frame::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid var(--secondaryColor);
+  border-top-left-radius: 250px;
+  bottom: -24px;
+  right: 24px;
+  z-index: -1;
+}
+/* FAQ READ more*/
+.hidden{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+.show_block{
+    max-height: 500px;
+    /* overflow: inherit;
+    transition: max-height 0.2s ease-in-out; */
 }
 
 
@@ -410,14 +439,15 @@
 
 .faq {
   max-width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 25px;
+  margin-top: 25px;
   border-bottom: 1px solid var(--secondaryColor) !important;
 }
 .answer {
   max-width: 80vw;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1.4s ease;
+  transition: max-height 0.5s ease;
 }
 .answer p {
   width: 100%;
@@ -427,7 +457,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
 }
 
 .question .question_text {
@@ -448,7 +477,6 @@
 }
 .faq.active .answer {
   max-height: 300px;
-  /* animation: fade 1s ease-in-out; */
 }
 
 .faq.active svg {
@@ -475,13 +503,8 @@ svg {
 /* ========== FOOTER SECTION =============================== */
 
 .footer {
-  background-image: url("/assets/images/footer-back.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  padding-top: 200px;
+  position: relative;
+  margin-top: 200px;
 }
 .footer_info {
   padding: 2rem 0;
@@ -498,25 +521,26 @@ svg {
 .footer .legal {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.footer .legal p{
-    font-size: 14px;
-}
-
-.footer .legal p, 
-.footer .footer_last_items li:nth-last-child(1)
-{
-    color: var(--mainColor);
+.footer .legal p {
+  font-size: 14px;
 }
 
-.footer_menu ul{
-    display: grid;
-    gap: 10px;
+.footer .legal p,
+.footer .footer_last_items li:nth-last-child(1) {
+  color: var(--mainColor);
+}
+
+.footer_menu ul {
+  display: grid;
+  gap: 10px;
 }
 
 .footer .footer_menu {
   display: flex;
   justify-content: space-evenly;
+  align-items: baseline;
 }
 .footer .footer_last_items {
   text-align: end;
@@ -524,9 +548,16 @@ svg {
   gap: 10px;
 }
 
-.footer .footer_last_items address{
-    font-family: var(--textFont);
-    font-style: normal;
+.footer .footer_last_items address {
+  font-family: var(--textFont);
+  font-style: normal;
+}
+
+.footer .legal .legal__links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    
 }
 
 /* LOADER/.........................................================================ */
@@ -537,7 +568,7 @@ svg {
   background-color: var(--secondaryColor);
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 999999999999;
   transition: 0.6s;
   display: flex;
   justify-content: center;

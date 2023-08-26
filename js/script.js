@@ -10,30 +10,24 @@ button.addEventListener('click', () => {
 const educationList = document.getElementById("education_list");
 const toggleButton = document.getElementById("toggle_button");
 
-for (let i = 6; i < educationList.children.length; i++) {
-  educationList.children[i].style.display = "none";
-}
 
-toggleButton.addEventListener("click", function() {
-  if (toggleButton.classList.contains("expanded")) {
-    for (let i = 6; i < educationList.children.length; i++) {
-      educationList.children[i].style.display = "none";
-    }
-    toggleButton.textContent = "Читать далее";
-    toggleButton.classList.remove("expanded");
-  } else {
-    for (let i = 6; i < educationList.children.length; i++) {
-      educationList.children[i].style.display = "list-item";
-    }
-    toggleButton.textContent = "Свернуть";
-    toggleButton.classList.add("expanded");
-  }
-});
+toggleButton.addEventListener("click", ()=>{
+    educationList.classList.toggle('show_block')
+   if(educationList.classList.contains('show_block')){
+    toggleButton.innerText="Свернуть"
+   }
+   else{
+    toggleButton.innerText="Читать далее"
+   }
+})
 // ==========================================================
 
 const faqs = document.querySelectorAll(".faq");
 faqs.forEach((faq) => {
   faq.addEventListener("click", () => {
+    if (!faq.classList.contains('active')) {
+        faqs.forEach(faq => (faq.classList.remove('active')))
+    }
     faq.classList.toggle("active");
   });
 });
