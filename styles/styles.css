@@ -32,7 +32,7 @@
 }
 
 .section {
-  padding-block: 5rem 2rem;
+  padding: 5rem 0;
 }
 .section_title {
   text-align: start;
@@ -339,7 +339,7 @@
 }
 /* ============== section  consultation ===========================*/
 .section_consultation {
-  margin-block: 12rem 2rem;
+  margin-top: 12rem;
   position: relative;
 }
 
@@ -370,7 +370,7 @@
 }
 
 .consultation_right_button-block .button {
-  width: clamp(187px, 50%, 192px);
+  width: clamp(175px, 50%, 192px);
   margin-top: 0;
 }
 
@@ -395,7 +395,7 @@
 
 /* ================= SECTION  FAQ ============================ */
 .section_faq {
-  padding-block: 9.5rem 2rem;
+  padding: 9.5rem 2rem;
 }
 
 .section_faq_content {
