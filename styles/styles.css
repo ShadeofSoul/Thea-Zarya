@@ -105,12 +105,13 @@
 
 .header {
   position: fixed;
+  /* position: relative; */
   top: 0;
   left: 0;
   width: 100%;
   background-color: var(--backgroundColor);
   height: var(--headerHeight);
-  z-index: var(--zFixed);
+  z-index: 999999999;
 }
 
 .nav {

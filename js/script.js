@@ -39,3 +39,14 @@ window.addEventListener("load", () => {
   mask.classList.add("hide");
   mask.style.display = "none";
 });
+//  ================
+const menuLinks = document.querySelectorAll('header .nav_menu a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    if( button.classList.contains("open")){
+      button.classList.remove("open");
+      menu.classList.remove("nav_active");
+    }
+  });
+});
