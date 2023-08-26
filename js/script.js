@@ -14,7 +14,7 @@ const sectionEdu = document.getElementById("education");
 toggleButton.addEventListener("click", () => {
   educationList.classList.toggle("show_block");
   if (educationList.classList.contains("show_block")) {
-    sectionEdu.style.marginBottom = "200px";
+    sectionEdu.style.marginBottom = "150px";
     toggleButton.innerText = "Свернуть";
   } else {
     sectionEdu.style.marginBottom = "0px";
