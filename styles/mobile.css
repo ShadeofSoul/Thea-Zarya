@@ -4,7 +4,11 @@
       border: none;
     }
     .header{
-        height: calc(var(--headerHeight) + 2rem);
+        height: calc(var(--headerHeight) + 3rem);
+    }
+    .container{
+        max-width: 600px;
+        min-width: 320px;
     }
     .nav_list {
       flex-direction: column;
@@ -30,6 +34,9 @@
     html{
         font-size: 15px;
     }
+    .section_title{
+        text-align: start !important;
+    }
   
     .section_upmain {
       grid-template-columns: 1fr;
@@ -48,7 +55,35 @@
     .button{
         margin-top: 2rem;
     }
-    
+    .section_main_content{
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .section_center{
+        margin: 0 auto;
+    }
+    .section_main .section_main_content > div{
+        order: -1;
+    }
+    .section_about_content, 
+    .section_education_content,
+    .section_faq_content
+    {
+        grid-template-columns: 1fr;
+    }
+    .section_about_right{
+        transform: scaleX(-1);
+    }
+    .section_consultation_content{
+        grid-template-columns: 1fr;
+    }
+    .section_faq_right{
+        display: none;
+    }
+    .footer_addr{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
   }
   
 

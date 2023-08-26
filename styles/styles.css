@@ -38,7 +38,7 @@
   text-align: start;
   color: var(--mainColor);
   font-weight: var(--fontRegular);
-  font-size: var(--titleFontSize);
+  font-size: clamp(30px, 8vw ,var(--titleFontSize));
   font-family: var(--titleFont);
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -158,6 +158,8 @@
   position: relative;
   max-width: 480px;
   max-height: 650px;
+  min-width: 358px;
+  min-height: 532px;
   z-index: 1;
 }
 
@@ -274,6 +276,8 @@
     position: relative;
     max-width: 432px;
     max-height: 646px;
+    min-width: 342px;
+    min-height: 532px;
     z-index: 1;
 }
 
@@ -352,6 +356,8 @@
     position: relative;
     max-width: 385px;
     max-height: 500px;
+    min-width: 343px;
+    min-height: 490px;
     z-index: 1;
 }
 
@@ -442,7 +448,7 @@
 }
 .faq.active .answer {
   max-height: 300px;
-  animation: fade 1s ease-in-out;
+  /* animation: fade 1s ease-in-out; */
 }
 
 .faq.active svg {
